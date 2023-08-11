@@ -1,0 +1,20 @@
+@import "../../index.scss";
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+  color: $light-color;
+  &-dark {
+    color: $dark-color;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: Oswald;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../index.scss";
+
+.card {
+  color: $light-color;
+  &-dark {
+    color: $dark-color;
+  }
+}
+
+.card__img {
+  width: 362px;
+  height: 226px;
+  border-radius: 15px;
+  object-fit: fill;
+  backdrop-filter: blur(2px);
+  filter: grayscale(1);
+  @media screen and (max-width: 805px) {
+    max-width: 330px;
+  }
+}
+
+.card__title {
+  font-size: 24px;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0 5px 0;
+  text-align: center;
+}
+
+.card__img:hover {
+  filter: grayscale(0);
+  transition: 1s;
+  transform: scale(1);
+}

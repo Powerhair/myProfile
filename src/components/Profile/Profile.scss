@@ -1,0 +1,166 @@
+@import "../../index.scss";
+
+.profile {
+  display: flex;
+  width: 631px;
+  margin-top: 65px;
+  flex-direction: column;
+  color: $light-color;
+  &__main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid #fff;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+  &__image-container {
+    width: 215px;
+    height: 215px;
+    flex-shrink: 0;
+    fill: #fff;
+    stroke-width: 4px;
+    stroke: #f7d039;
+    background-image: url(../../images/Ellipse.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__image {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    opacity: lightgray 50%;
+    object-fit: cover;
+  }
+  &__name {
+    margin: 0;
+    font-family: Oswald;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &__job {
+    margin: 0;
+    font-family: Oswald;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &__contact {
+    margin-bottom: 20px;
+    display: flex;
+    margin-top: 20px;
+    @media screen and (max-width: 600px) {
+      gap: 30px;
+    }
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    margin-top: 50px;
+    @media screen and (max-width: 600px) {
+      gap: 27.5px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 148px;
+    gap: 10px;
+  }
+  &__block-num {
+    font-size: 24px;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+  &__block-description {
+    font-family: Oswald;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    margin: 0;
+    width: 200px;
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+  &__container {
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &-dark {
+    color: $dark-color;
+  }
+}
+
+.contact-icon {
+  width: 25px; /* Укажите желаемую ширину */
+  height: 25px; /* Укажите желаемую высоту */
+  margin-right: 10px;
+  &-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.contact-name {
+  margin: 0;
+}
+
+.telegram {
+  background-image: url(../../images/telegram_light.svg);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  filter: invert(80%);
+  &-light {
+    filter: invert(0%);
+  }
+}
+
+.mail {
+  background-image: url(../../images/mail_light.svg);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  filter: invert(80%);
+  &-light {
+    filter: invert(0%);
+  }
+}
+
+.instagram {
+  background-image: url(../../images/instagram_light.svg);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  filter: invert(80%);
+  &-light {
+    filter: invert(0%);
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../index.scss";
+
+.hardskills {
+  grid-column: 1;
+  list-style-type: none;
+  color: $light-color;
+  &-dark {
+    color: $dark-color;
+  }
+}
+
+.softskills {
+  grid-column: 2;
+  list-style-type: none;
+  color: $light-color;
+  &-dark {
+    color: $dark-color;
+  }
+}
+
+.point {
+  font-family: Oswald;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.531px;
+  margin: 0 0 10px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.title-hard {
+  font-family: Oswald;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.531px;
+  margin: 0;
+  color: $light-color;
+  &-dark {
+    color: $dark-color;
+  }
+}
+
+.title-soft {
+  font-family: Oswald;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.531px;
+  margin: 0;
+  color: $light-color;
+  max-height: 39px;
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+  &-dark {
+    color: $dark-color;
+  }
+  &-low {
+    display: none;
+    font-family: Oswald;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.531px;
+    margin: 0;
+    color: $light-color;
+    max-height: 39px;
+    @media screen and (max-width: 750px) {
+      display: block;
+    }
+  }
+}
