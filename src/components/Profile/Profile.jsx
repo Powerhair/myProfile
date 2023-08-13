@@ -12,19 +12,27 @@ function Profile({ isTheme }) {
           <h1 className="profile__name">Pavel Bondarevskii</h1>
           <p className="profile__job">Frontend разработчик</p>
           <div className="profile__contact">
-            <a href="https://t.me/@stupidhair">
+            <a href="https://t.me/@stupidhair" target="_blank" rel="noreferrer">
               <div
                 className={`contact-icon telegram ${
                   isTheme ? "telegram-light" : ""
                 }`}
               ></div>
             </a>
-            <a href="https://gohre94@gmail.com">
+            <a
+              href="https://gohre94@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div
                 className={`contact-icon mail ${isTheme ? "mail-light" : ""}`}
               ></div>
             </a>
-            <a href="https://instagram.com/pavelbondarevskii">
+            <a
+              href="https://instagram.com/pavelbondarevskii"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div
                 className={`contact-icon instagram ${
                   isTheme ? "instagram-light" : ""

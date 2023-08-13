@@ -72,6 +72,9 @@
     margin: 0;
     color: $light-color;
     max-height: 39px;
+    &-dark {
+      color: $dark-color;
+    }
     @media screen and (max-width: 750px) {
       display: block;
     }

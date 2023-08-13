@@ -39,7 +39,7 @@ function App() {
         isTheme={isTheme}
       ></ButtonBlocks>
       <Layout isShow={isShow} isTheme={isTheme}></Layout>
-      <Footer isShow={isShow}></Footer>
+      <Footer isTheme={isTheme}></Footer>
       <PopupLayout></PopupLayout>
     </div>
   );

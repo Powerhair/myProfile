@@ -1,20 +1,32 @@
 import "./ButtonBlocks.scss";
-
+import { resumeLink, diplomaLink } from "../../data/data";
 function ButtonBlocks({ handleShowTrue, handleShowFalse, isShow, isTheme }) {
   return (
     <div className="button__main-container">
+      <div className="button__container-download">
+        <a
+          href={resumeLink}
+          target="_blank"
+          className={`button-download ${isTheme ? "" : "button-download-dark"}`}
+          rel="noreferrer"
+        >
+          Резюме
+        </a>
+        <a
+          href={diplomaLink}
+          target="_blank"
+          className={`button-download ${isTheme ? "" : "button-download-dark"}`}
+          rel="noreferrer"
+        >
+          Диплом
+        </a>
+      </div>
       <div className="button__container-download">
         <button
           type="button"
           className={`button-download ${isTheme ? "" : "button-download-dark"}`}
         >
-          Резюме
-        </button>
-        <button
-          type="button"
-          className={`button-download ${isTheme ? "" : "button-download-dark"}`}
-        >
-          Диплом
+          Обо мне
         </button>
       </div>
       <div

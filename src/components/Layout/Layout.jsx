@@ -1,7 +1,7 @@
 import "./Layout.scss";
 import Card from "../Card/Card";
 import Skills from "../Skills/Skills";
-import cardData from "../../data/data";
+import { cardData } from "../../data/data";
 
 function Layout({ isShow, isTheme }) {
   return (
