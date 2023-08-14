@@ -1,6 +1,12 @@
 import "./ButtonBlocks.scss";
 import { resumeLink, diplomaLink } from "../../data/data";
-function ButtonBlocks({ handleShowTrue, handleShowFalse, isShow, isTheme }) {
+function ButtonBlocks({
+  handleShowTrue,
+  handleShowFalse,
+  handleShowAboutMe,
+  isShow,
+  isTheme,
+}) {
   return (
     <div className="button__main-container">
       <div className="button__container-download">
@@ -23,6 +29,7 @@ function ButtonBlocks({ handleShowTrue, handleShowFalse, isShow, isTheme }) {
       </div>
       <div className="button__container-download">
         <button
+          onClick={handleShowAboutMe}
           type="button"
           className={`button-download ${isTheme ? "" : "button-download-dark"}`}
         >

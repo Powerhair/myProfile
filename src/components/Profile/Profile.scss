@@ -1,8 +1,17 @@
 @import "../../index.scss";
 
+@keyframes fade {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  } /* начальное состояние - прозрачный текст */
+  100% {
+    opacity: 1;
+  } /* текст полностью видимый */
+}
+
 .fade-in-out {
-  visibility: visible;
-  opacity: 0.7;
+  animation: fade 1s ease-in-out;
 }
 
 .text-hidden {
