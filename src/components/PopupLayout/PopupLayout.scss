@@ -10,6 +10,9 @@
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &-opened {
     transition: 0.7s;
     visibility: visible;
@@ -21,19 +24,22 @@
     background: #e9ebec;
     display: flex;
     flex-direction: column;
-    left: 0;
-    right: 0;
-    top: 50px;
-    bottom: 0;
     margin: auto;
-
     gap: 30px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    position: absolute;
+    position: fixed;
     overflow-y: scroll;
     padding: 34px 36px 37px;
     z-index: 2;
+    text-align: justify;
+    @media screen and (max-width: 600px) {
+      width: 350px;
+    }
+  }
+  &__about {
+    top: 50px;
+    height: 80%;
   }
   &__button-close {
     position: absolute;
@@ -66,6 +72,10 @@
     background: #fff;
     width: 290px;
     cursor: pointer;
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      width: 150px;
+    }
     &:hover {
       background: #fbd144;
     }
@@ -77,13 +87,22 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    @media screen and (max-width: 600px) {
+      font-size: 38px;
+    }
   }
   &__description {
-    margin: 0;
+    margin: 0 0 10px 0;
     font-family: Oswald;
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+    }
   }
 }
