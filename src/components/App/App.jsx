@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Profile from "../Profile/Profile";
 import Theme from "../Theme/Theme";
 import ButtonBlocks from "../ButtonBlocks/ButtonBlocks";
@@ -8,11 +8,18 @@ import Footer from "../Footer/Footer";
 import PopupLayout from "../PopupLayout/PopupLayout";
 import PopupAbout from "../PopupAbout/PopupAbout";
 import "../../fonts/fonts.css";
-
+import capy from "../../images/capy.svg";
 function App() {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
   const [isTheme, setIsTheme] = useState(true);
   const [isOpenAboutMe, setIsOpenAboutMe] = useState(false);
+
+  useEffect(() => {
+    document.title = "My Profile";
+
+    const favicon = document.querySelector('link[rel="icon"]');
+    favicon.href = capy;
+  }, []);
 
   function handleChangeTheme() {
     if (isTheme === true) {

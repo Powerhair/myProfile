@@ -25,7 +25,7 @@ function Profile({ isTheme }) {
           <img className="profile__image" src={profile} alt="" />
         </div>
         <div className="profile__container">
-          <h1 className="profile__name">Pavel Bondarevskii</h1>
+          <h1 className="profile__name">Павел Бондаревский</h1>
           <p className="profile__job">Frontend разработчик</p>
           <div className="profile__contact">
             <a href="https://t.me/stupidhair" target="_blank" rel="noreferrer">
