@@ -1,8 +1,10 @@
 import "./PopupLayout.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function PopupLayout() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const overlayRef = useRef();
 
   function handleClosePopup() {
     setIsOpen(false);
@@ -12,8 +14,30 @@ function PopupLayout() {
     setIsOpen(true);
   }, []);
 
+  useEffect(() => {
+    const closeOnEsc = (event) => {
+      if (event.keyCode === 27 || event.key === "Enter") {
+        handleClosePopup();
+      }
+    };
+
+    const closeOnClickOutside = (event) => {
+      if (event.target === overlayRef.current) {
+        handleClosePopup();
+      }
+    };
+
+    document.addEventListener("keydown", closeOnEsc);
+    document.addEventListener("click", closeOnClickOutside);
+
+    return () => {
+      document.removeEventListener("keydown", closeOnEsc);
+      document.removeEventListener("click", closeOnClickOutside);
+    };
+  }, []);
+
   return (
-    <div className={`popup ${isOpen ? "popup-opened" : ""}`}>
+    <div ref={overlayRef} className={`popup ${isOpen ? "popup-opened" : ""}`}>
       <div className="popup__window">
         {/* <button type="button" className="popup__button-close"></button> */}
         <h4 className="popup__title">Привет!</h4>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/myProfile/static/css/main.1a953564.css",
-    "main.js": "/myProfile/static/js/main.3d261eda.js",
+    "main.css": "/myProfile/static/css/main.1ed3a98f.css",
+    "main.js": "/myProfile/static/js/main.e857fc5e.js",
     "static/js/787.a6e0be23.chunk.js": "/myProfile/static/js/787.a6e0be23.chunk.js",
     "static/media/howtolearn.png": "/myProfile/static/media/howtolearn.49bc0882ea123d921300.png",
     "static/media/profile.png": "/myProfile/static/media/profile.51b8781b54c98e840361.png",
@@ -9,6 +9,7 @@
     "static/media/mesto.png": "/myProfile/static/media/mesto.9eecf2c087a1fd19f216.png",
     "static/media/travel.png": "/myProfile/static/media/travel.41f94c817a815a498065.png",
     "static/media/Oswald.ttf": "/myProfile/static/media/Oswald.292bdf409c7b9c1c5683.ttf",
+    "static/media/capy.svg": "/myProfile/static/media/capy.f94bc6992b84d251c15905a87da40945.svg",
     "static/media/theme__icon.svg": "/myProfile/static/media/theme__icon.fdb8194630439185002bcc851bd37e6c.svg",
     "static/media/telegram_light.svg": "/myProfile/static/media/telegram_light.f2fb44ec26c3094a21bb.svg",
     "static/media/mail_light.svg": "/myProfile/static/media/mail_light.e6ddfac94aadca00d41c.svg",
@@ -16,12 +17,12 @@
     "static/media/instagram_light.svg": "/myProfile/static/media/instagram_light.a63c9476fa83b33ffc32.svg",
     "index.html": "/myProfile/index.html",
     "static/media/Ellipse.svg": "/myProfile/static/media/Ellipse.c59c97e75cbe96a979b7.svg",
-    "main.1a953564.css.map": "/myProfile/static/css/main.1a953564.css.map",
-    "main.3d261eda.js.map": "/myProfile/static/js/main.3d261eda.js.map",
+    "main.1ed3a98f.css.map": "/myProfile/static/css/main.1ed3a98f.css.map",
+    "main.e857fc5e.js.map": "/myProfile/static/js/main.e857fc5e.js.map",
     "787.a6e0be23.chunk.js.map": "/myProfile/static/js/787.a6e0be23.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a953564.css",
-    "static/js/main.3d261eda.js"
+    "static/css/main.1ed3a98f.css",
+    "static/js/main.e857fc5e.js"
   ]
 }

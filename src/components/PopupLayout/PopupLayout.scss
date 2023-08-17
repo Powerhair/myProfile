@@ -2,7 +2,6 @@
 
 .popup {
   visibility: hidden;
-  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
@@ -13,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
   &-opened {
     transition: 0.7s;
     visibility: visible;
@@ -32,6 +32,7 @@
     overflow-y: scroll;
     padding: 34px 36px 37px;
     z-index: 2;
+    // position: fixed;
     text-align: justify;
     @media screen and (max-width: 600px) {
       width: 350px;
@@ -103,6 +104,11 @@
     }
     @media screen and (max-width: 600px) {
       font-size: 18px;
+    }
+    &-color {
+      color: #fbd144;
+      margin: 0;
+      display: inline;
     }
   }
 }

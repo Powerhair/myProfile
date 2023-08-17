@@ -60,8 +60,10 @@ function App() {
       <Footer isTheme={isTheme}></Footer>
       <PopupLayout></PopupLayout>
       <PopupAbout
+        key={isOpenAboutMe}
         isOpenAboutMe={isOpenAboutMe}
         handleCloseAboutMe={handleCloseAboutMe}
+        handleShowAboutMe={handleShowAboutMe}
       ></PopupAbout>
     </div>
   );
