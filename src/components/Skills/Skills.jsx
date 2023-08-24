@@ -13,6 +13,8 @@ function Skills({ isTheme }) {
         <li className="point">React</li>
         <li className="point">HTML, BEM</li>
         <li className="point">CSS, SCSS</li>
+        <li className="point">Canvas</li>
+        <li className="point">NodeJS, ExpressJs</li>
         <li className="point">RESTful API</li>
         <li className="point">GIT</li>
         <li className="point">Eslint, Prettier</li>
