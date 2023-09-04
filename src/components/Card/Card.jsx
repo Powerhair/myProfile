@@ -1,9 +1,9 @@
 import "./Card.scss";
 
-function Card({ title, content, link, isTheme }) {
+function Card({ titleRu, titleEn, isLanguage, content, link, isTheme }) {
   return (
     <div className={`card ${isTheme ? "" : "card-dark"}`}>
-      <h2 className="card__title">{title}</h2>
+      <h2 className="card__title">{isLanguage ? titleRu : titleEn}</h2>
       <a href={link} target="_blank" rel="noreferrer">
         <img className="card__img" src={content}></img>
       </a>

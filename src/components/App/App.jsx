@@ -9,10 +9,12 @@ import PopupLayout from "../PopupLayout/PopupLayout";
 import PopupAbout from "../PopupAbout/PopupAbout";
 import "../../fonts/fonts.css";
 import capy from "../../images/capy.svg";
+
 function App() {
   const [isShow, setIsShow] = useState(true);
   const [isTheme, setIsTheme] = useState(true);
   const [isOpenAboutMe, setIsOpenAboutMe] = useState(false);
+  const [isLanguage, setIsLanguage] = useState(true);
 
   useEffect(() => {
     document.title = "My Profile";
@@ -45,25 +47,51 @@ function App() {
     setIsOpenAboutMe(false);
   }
 
+  function handleChangeLanguageEn() {
+    setIsLanguage(true);
+  }
+  function handleChangeLanguageRu() {
+    setIsLanguage(false);
+  }
+
+  console.log(isLanguage);
+
   return (
     <div className={`page ${isTheme ? "" : "page__dark"}`}>
-      <Theme handleChangeTheme={handleChangeTheme} isTheme={isTheme}></Theme>
-      <Profile isTheme={isTheme}></Profile>
+      <Theme
+        handleChangeTheme={handleChangeTheme}
+        isTheme={isTheme}
+        handleChangeLanguageEn={handleChangeLanguageEn}
+        handleChangeLanguageRu={handleChangeLanguageRu}
+      ></Theme>
+      <Profile isTheme={isTheme} isLanguage={isLanguage}></Profile>
       <ButtonBlocks
         handleShowTrue={handleShowTrue}
         handleShowFalse={handleShowFalse}
         isShow={isShow}
         isTheme={isTheme}
         handleShowAboutMe={handleShowAboutMe}
+        isLanguage={isLanguage}
       ></ButtonBlocks>
-      <Layout isShow={isShow} isTheme={isTheme}></Layout>
-      <Footer isTheme={isTheme}></Footer>
-      <PopupLayout></PopupLayout>
+      <Layout
+        isShow={isShow}
+        isTheme={isTheme}
+        isLanguage={isLanguage}
+      ></Layout>
+      <Footer isTheme={isTheme} isLanguage={isLanguage}></Footer>
+      <PopupLayout
+        isLanguage={isLanguage}
+        handleChangeLanguageEn={handleChangeLanguageEn}
+        handleChangeLanguageRu={handleChangeLanguageRu}
+      ></PopupLayout>
       <PopupAbout
         key={isOpenAboutMe}
         isOpenAboutMe={isOpenAboutMe}
         handleCloseAboutMe={handleCloseAboutMe}
         handleShowAboutMe={handleShowAboutMe}
+        isLanguage={isLanguage}
+        handleChangeLanguageEn={handleChangeLanguageEn}
+        handleChangeLanguageRu={handleChangeLanguageRu}
       ></PopupAbout>
     </div>
   );

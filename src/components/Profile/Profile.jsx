@@ -1,8 +1,9 @@
 import "./Profile.scss";
 import profile from "../../images/profile.png";
 import { useState } from "react";
+import { profileText } from "../../data/text";
 
-function Profile({ isTheme }) {
+function Profile({ isTheme, isLanguage }) {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyEmail = () => {
@@ -25,8 +26,12 @@ function Profile({ isTheme }) {
           <img className="profile__image" src={profile} alt="" />
         </div>
         <div className="profile__container">
-          <h1 className="profile__name">Павел Бондаревский</h1>
-          <p className="profile__job">Frontend разработчик</p>
+          <h1 className="profile__name">
+            {isLanguage ? profileText.nameRu : profileText.nameEn}
+          </h1>
+          <p className="profile__job">
+            {isLanguage ? profileText.jobRu : profileText.jobEn}
+          </p>
           <div className="profile__contact">
             <a href="https://t.me/stupidhair" target="_blank" rel="noreferrer">
               <div
@@ -46,7 +51,7 @@ function Profile({ isTheme }) {
                 }`}
               >
                 {" "}
-                Адрес скопирован!
+                {isLanguage ? profileText.copyTextRu : profileText.copyTextEn}
               </p>
             </div>
 
@@ -68,12 +73,14 @@ function Profile({ isTheme }) {
         <div className="profile__block">
           <p className="profile__block-num">1 год</p>
           <p className="profile__block-description">
-            Опыт во Frontend разработке
+            {isLanguage ? profileText.experienceRu : profileText.experienceEn}
           </p>
         </div>
         <div className="profile__block">
           <p className="profile__block-num">4</p>
-          <p className="profile__block-description">Готовых проекта</p>
+          <p className="profile__block-description">
+            {isLanguage ? profileText.doneProjectRu : profileText.doneProjectEn}
+          </p>
         </div>
       </div>
     </div>

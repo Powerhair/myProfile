@@ -1,11 +1,14 @@
 import "./ButtonBlocks.scss";
 import { resumeLink, diplomaLink } from "../../data/data";
+import { buttonText } from "../../data/text";
+
 function ButtonBlocks({
   handleShowTrue,
   handleShowFalse,
   handleShowAboutMe,
   isShow,
   isTheme,
+  isLanguage,
 }) {
   return (
     <div className="button__main-container">
@@ -16,7 +19,7 @@ function ButtonBlocks({
           className={`button-download ${isTheme ? "" : "button-download-dark"}`}
           rel="noreferrer"
         >
-          Резюме
+          {isLanguage ? buttonText.resumeRu : buttonText.resumeEn}
         </a>
         <a
           href={diplomaLink}
@@ -24,7 +27,7 @@ function ButtonBlocks({
           className={`button-download ${isTheme ? "" : "button-download-dark"}`}
           rel="noreferrer"
         >
-          Диплом
+          {isLanguage ? buttonText.diplomRu : buttonText.diplomEn}
         </a>
       </div>
       <div className="button__container-download">
@@ -33,7 +36,7 @@ function ButtonBlocks({
           type="button"
           className={`button-download ${isTheme ? "" : "button-download-dark"}`}
         >
-          Обо мне
+          {isLanguage ? buttonText.aboutRu : buttonText.aboutEn}
         </button>
       </div>
       <div
@@ -49,7 +52,7 @@ function ButtonBlocks({
           }`}
           data-theme={isTheme.toString()}
         >
-          Портфолио
+          {isLanguage ? buttonText.portfoliRu : buttonText.portfoliEn}
         </button>
         <button
           onClick={handleShowFalse}
@@ -59,7 +62,7 @@ function ButtonBlocks({
           } `}
           data-theme={isTheme.toString()}
         >
-          Навыки
+          {isLanguage ? buttonText.skillsRu : buttonText.skillsEn}
         </button>
       </div>
     </div>

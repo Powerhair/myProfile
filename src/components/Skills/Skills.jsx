@@ -1,6 +1,7 @@
 import "./Skills.scss";
+import { skillsText } from "../../data/text";
 
-function Skills({ isTheme }) {
+function Skills({ isTheme, isLanguage }) {
   return (
     <>
       <h4 className={`title-hard ${isTheme ? "" : "title-hard-dark"}`}>
@@ -23,11 +24,27 @@ function Skills({ isTheme }) {
         Личностные навыки
       </h4>
       <ul className={`softskills ${isTheme ? "" : "softskills-dark"}`}>
-        <li className="point">Адаптивность</li>
-        <li className="point">Проблемное мышление</li>
-        <li className="point">Сотрудничество</li>
-        <li className="point">Коммуникация</li>
-        <li className="point">Эмпатия</li>
+        <li className="point">
+          {isLanguage ? skillsText.firstskillRu : skillsText.firstskillEn}
+        </li>
+        <li className="point">
+          {isLanguage ? skillsText.secondSkillRu : skillsText.secondSkillEn}
+        </li>
+        <li className="point">
+          {isLanguage ? skillsText.thirdSkillRu : skillsText.thirdSkillEn}
+        </li>
+        <li className="point">
+          {isLanguage ? skillsText.fourSkillRu : skillsText.fourSkillEn}
+        </li>
+        <li className="point">
+          {isLanguage ? skillsText.fiveSkillRu : skillsText.fiveSkillEn}
+        </li>
+        <li className="point">
+          {isLanguage ? skillsText.sixSkillRu : skillsText.sixSkillEn}
+        </li>
+        <li className="point">
+          {isLanguage ? skillsText.sevenSkillRu : skillsText.sevenSkillEn}
+        </li>
       </ul>
     </>
   );

@@ -13,11 +13,23 @@
   justify-content: center;
   align-items: center;
   position: fixed;
+
   &-opened {
     transition: 0.7s;
     visibility: visible;
     opacity: 1;
   }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 300px;
+    @media screen and (max-width: 600px) {
+      gap: 90px;
+    }
+  }
+
   &__window {
     box-sizing: border-box;
     max-width: 630px;
@@ -28,35 +40,43 @@
     gap: 30px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    position: fixed;
+    position: relative;
     overflow-y: scroll;
     padding: 34px 36px 37px;
-    z-index: 2;
-    // position: fixed;
+    // z-index: 2;
     text-align: justify;
+    overflow-y: hidden;
     @media screen and (max-width: 600px) {
       width: 350px;
     }
   }
+
   &__about {
     top: 50px;
     height: 80%;
+    overflow-y: scroll;
   }
+
   &__button-close {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    right: 10px;
+    position: fixed;
     top: 10px;
+    right: 10px;
     background-image: url(../../images/close_icon.svg);
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: center;
     background-size: cover;
     border: none;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
-    transition: opacity 0.5s ease;
+    filter: invert(1);
+    z-index: 1;
+    &:hover {
+      opacity: 0.7;
+    }
   }
+
   &__button-about {
     border-radius: 10px;
     border: 0px solid #3e64aa;
@@ -81,6 +101,7 @@
       background: #fbd144;
     }
   }
+
   &__title {
     margin: 0;
     font-family: Oswald;
@@ -92,6 +113,7 @@
       font-size: 38px;
     }
   }
+
   &__description {
     margin: 0 0 10px 0;
     font-family: Oswald;

@@ -4,19 +4,14 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  flex-shrink: 0;
   background-color: #fff;
   stroke-width: 1px;
   stroke: #e7e7e7;
-  cursor: pointer;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
   &-dark {
     background-color: #171f26;
-  }
-
-  &:hover {
-    opacity: 0.3;
-    transition: 0.7s;
   }
 }
 
@@ -24,7 +19,40 @@
   width: 40px;
   height: 40px;
   margin: 20px;
+  margin-right: 200px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.3;
+    transition: 0.7s;
+  }
+  @media screen and (max-width: 600px) {
+    margin-right: 90px;
+  }
   &-dark {
     filter: invert(100%);
+  }
+}
+
+.theme__container {
+  display: flex;
+  gap: 10px;
+}
+
+.theme__language {
+  margin: 0;
+  color: $light-color;
+  font-family: Oswald;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.531px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.3;
+    transition: 0.7s;
+  }
+  &-dark {
+    color: $dark-color;
   }
 }
