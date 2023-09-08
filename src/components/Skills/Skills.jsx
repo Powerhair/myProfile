@@ -11,7 +11,7 @@ function Skills({ isTheme, isLanguage }) {
         Личностные навыки
       </h4>
       <ul className={`hardskills ${isTheme ? "" : "hardskills-dark"}`}>
-        <li className="point">React</li>
+        <li className="point">React, Redux</li>
         <li className="point">HTML, BEM</li>
         <li className="point">CSS, SCSS</li>
         <li className="point">Canvas</li>

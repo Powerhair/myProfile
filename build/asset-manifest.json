@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/myProfile/static/css/main.42c19e2d.css",
-    "main.js": "/myProfile/static/js/main.0024ce79.js",
+    "main.js": "/myProfile/static/js/main.a992508d.js",
     "static/js/787.a6e0be23.chunk.js": "/myProfile/static/js/787.a6e0be23.chunk.js",
     "static/media/howtolearn.png": "/myProfile/static/media/howtolearn.49bc0882ea123d921300.png",
     "static/media/profile.png": "/myProfile/static/media/profile.51b8781b54c98e840361.png",
     "static/media/diploma.png": "/myProfile/static/media/diploma.0d32f4d211a7b1fc5faf.png",
     "static/media/mesto.png": "/myProfile/static/media/mesto.9eecf2c087a1fd19f216.png",
+    "static/media/resume.pdf": "/myProfile/static/media/resume.617619a82618034a596c.pdf",
     "static/media/travel.png": "/myProfile/static/media/travel.41f94c817a815a498065.png",
     "static/media/Oswald.ttf": "/myProfile/static/media/Oswald.292bdf409c7b9c1c5683.ttf",
     "static/media/capy.svg": "/myProfile/static/media/capy.f94bc6992b84d251c15905a87da40945.svg",
@@ -18,11 +19,11 @@
     "index.html": "/myProfile/index.html",
     "static/media/Ellipse.svg": "/myProfile/static/media/Ellipse.c59c97e75cbe96a979b7.svg",
     "main.42c19e2d.css.map": "/myProfile/static/css/main.42c19e2d.css.map",
-    "main.0024ce79.js.map": "/myProfile/static/js/main.0024ce79.js.map",
+    "main.a992508d.js.map": "/myProfile/static/js/main.a992508d.js.map",
     "787.a6e0be23.chunk.js.map": "/myProfile/static/js/787.a6e0be23.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42c19e2d.css",
-    "static/js/main.0024ce79.js"
+    "static/js/main.a992508d.js"
   ]
 }

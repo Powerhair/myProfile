@@ -1,6 +1,7 @@
 import "./ButtonBlocks.scss";
 import { resumeLink, diplomaLink } from "../../data/data";
 import { buttonText } from "../../data/text";
+import resume from "../../data/resume.pdf";
 
 function ButtonBlocks({
   handleShowTrue,
@@ -10,17 +11,24 @@ function ButtonBlocks({
   isTheme,
   isLanguage,
 }) {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = resume;
+    link.setAttribute("download", "resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="button__main-container">
       <div className="button__container-download">
-        <a
-          href={resumeLink}
-          target="_blank"
+        <button
+          onClick={handleDownload}
           className={`button-download ${isTheme ? "" : "button-download-dark"}`}
-          rel="noreferrer"
         >
           {isLanguage ? buttonText.resumeRu : buttonText.resumeEn}
-        </a>
+        </button>
         <a
           href={diplomaLink}
           target="_blank"
